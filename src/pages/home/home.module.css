@@ -1,0 +1,56 @@
+
+.containerPrincipal {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.containerTexto {
+    margin-top: 12vh;
+    width: 40%;
+    padding: 2rem;
+    display: flex;
+    align-items: start;
+    max-height: calc(100vh - 12vh);
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.texto {
+    line-height: 2rem;
+    text-align: justify;
+    color: darkgreen;
+    font-size: 1.6rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.containerImagem {
+    width: 60%;
+    height: 100%;
+}
+
+.backgroundLogin {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bemVindo {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .containerPrincipal {
+        flex-direction: column;
+    }
+
+    .containerTexto,
+    .containerImagem {
+        width: 100%;
+    }
+}
