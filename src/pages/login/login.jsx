@@ -70,7 +70,7 @@ const Login = () => {
                                 <label className="w-100">Password</label>
                             </div>
                             <div>
-                                <input value={password} type="current-password" className={styles.input}
+                                <input value={password} type="password" className={styles.input}
                                        placeholder="Password"
                                        onChange={(e) => setPassword(e.target.value)}/>
                             </div>
