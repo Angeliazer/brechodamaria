@@ -15,6 +15,7 @@ const Cadastro = () => {
     const [nome, setNome] = useState('');
     const [error, setError] = useState(false);
     const [mensagem, setMensagem] = useState('');
+    const [viewMessage, setViewMessage] = useState(false);
     const navigate = useNavigate();
 
     const salvarApi = async () => {
@@ -35,13 +36,20 @@ const Cadastro = () => {
         usuario.dataCadastro = dateCadastre;
 
         try {
+            setViewMessage(false);
             const response = await api.post('/usuarios', usuario);
             localStorage.setItem('usuario', JSON.stringify(response.data));
             setMensagem('Registro Cadastrado com Sucesso!');
             setError(true);
             navigate('/home');
         } catch (e) {
-            console.log(e.message);
+            if (e.response?.data.error) {
+                setError(e.response.data.error);
+                setViewMessage(true);
+            } else {
+                setError(e.message);
+                setViewMessage(true);
+            }
         }
     };
     const limparSenhas = () => {
@@ -54,7 +62,7 @@ const Cadastro = () => {
     return (
         <>
             <div>
-                {error ? <Mensagem mensag={mensagem} onClick={limparSenhas}/> : ''}
+                {viewMessage && <Mensagem mensag={error} onClick={limparSenhas} />}
             </div>
             <div className={styles.containerPrincipal}>
                 <div className={styles.containerTexto}>
