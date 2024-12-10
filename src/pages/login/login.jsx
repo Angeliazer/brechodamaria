@@ -24,12 +24,12 @@ const Login = () => {
             // Save to localStorage
             localStorage.setItem('usuario', JSON.stringify(response.data));
             api.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;
-            setUser(response.data)
+            setUser(response.data);
 
             if (response.data.email === 'admin@admin.com.br')
                 navigate('/dashboard');
-                  else
-                      navigate('/home');
+            else
+                navigate('/home');
 
         } catch (e) {
             if (e.response?.data.error) {
@@ -49,10 +49,10 @@ const Login = () => {
             <div>
                 {viewMessage && <Mensagem mensag={error} onClick={handledClick}/>}
             </div>
-            <Navbar />
+            <Navbar/>
             <div className={styles.containerPrincipal}>
                 <div className={styles.containerTexto}>
-                    <div className={styles.containerLogin}>
+                    <form className={styles.containerLogin}>
                         <div className="w-100 d-flex mt-3 justify-content-center">
                             <label className={styles.textoLabel}>Login</label>
                         </div>
@@ -75,7 +75,8 @@ const Login = () => {
                                        onChange={(e) => setPassword(e.target.value)}/>
                             </div>
                         </div>
-                        <div className="d-flex w-100 mt-4 justify-content-center align-items-center flex-column mb-5">
+                        <div
+                            className="d-flex w-100 mt-4 justify-content-center align-items-center flex-column mb-5">
                             <button type="button" className={styles.buttonLogin} onClick={loginApi}>Acessar</button>
                         </div>
                         <div className={styles.textSemCadastro}>
@@ -91,7 +92,7 @@ const Login = () => {
                                 </Link>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div className={styles.containerImagem}>
                     <img src={fundo} className={styles.backgroundLogin} alt="fundo"/>
