@@ -27,7 +27,7 @@ const Catalog = () => {
         };
         setCategory([]);
         verifyLog();
-    };
+    }, []);
 
     function junta(e){
         console.log(e.target.value);
