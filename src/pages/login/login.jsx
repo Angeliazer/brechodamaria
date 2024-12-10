@@ -52,7 +52,7 @@ const Login = () => {
             <Navbar/>
             <div className={styles.containerPrincipal}>
                 <div className={styles.containerTexto}>
-                    <form className={styles.containerLogin}>
+                    <div className={styles.containerLogin}>
                         <div className="w-100 d-flex mt-3 justify-content-center">
                             <label className={styles.textoLabel}>Login</label>
                         </div>
@@ -92,7 +92,7 @@ const Login = () => {
                                 </Link>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <div className={styles.containerImagem}>
                     <img src={fundo} className={styles.backgroundLogin} alt="fundo"/>
