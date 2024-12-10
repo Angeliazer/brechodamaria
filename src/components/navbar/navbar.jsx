@@ -3,6 +3,7 @@ import styles from './navbar.module.css';
 import {useNavigate} from 'react-router-dom';
 import {AuthContext} from '../../context/AuthContext.jsx';
 import {Usuario} from '../usuario/usuario.jsx';
+import logo from '/src/assets/pexels-kowalievska-1148957.jpg'
 
 const Navbar = () => {
 
@@ -25,7 +26,7 @@ const Navbar = () => {
         <div className={styles.containerNavbar}>
             <div className={styles.header}>
                 <div className={styles.containerLogo}>
-                    <img className={styles.logotipo} src="/src/assets/pexels-kowalievska-1148957.jpg" alt="logo"/>
+                    <img className={styles.logotipo} src={logo} alt="logo"/>
                     <span className={styles.nomeLogo}>Brechó da Maria</span>
                 </div>
                 <div className={styles.containerButton}>

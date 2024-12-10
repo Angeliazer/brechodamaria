@@ -15,7 +15,7 @@ const NavCatalog = ({category}) => {
 
             const cliente = new Client();
 
-            cliente.name = 'Jesse da Costa';
+            cliente.name = 'Maria Júlia Pimentel';
             cliente.email = 'cida.rigon@hotmail.com';
             cliente.address = 'Rua Santos da Cruz';
             cliente.addressNumber = '216';
