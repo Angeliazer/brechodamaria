@@ -5,6 +5,7 @@ import {Usuario} from '../usuario/usuario.jsx';
 // import {AuthContext} from '../../context/AuthContext.jsx';
 import {Client} from '/src/asaas.js';
 import {api} from '/src/instance-axios.js';
+import logo from '/src/assets/pexels-kowalievska-1148957.jpg'
 
 
 const NavCatalog = ({category}) => {
@@ -43,7 +44,7 @@ const NavCatalog = ({category}) => {
             <div className={styles.containerCatalog}>
                 <div className={styles.header}>
                     <div className={styles.containerLogo}>
-                        <img className={styles.logotipo} src="/src/assets/pexels-kowalievska-1148957.jpg" alt="logo"/>
+                        <img className={styles.logotipo} src={logo} alt="logo"/>
                         <span className={styles.nomeLogo}>Brechó da Maria</span>
                     </div>
                     <div className={styles.containerButtons}>
