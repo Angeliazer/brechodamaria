@@ -127,7 +127,7 @@ const Cadastro = () => {
                         <div className={styles.textSemCadastro}>
                             <div>
                                 <span>Já tem conta?</span>
-                                <Link to={'/'}>
+                                <Link to={'/'} className={styles.link}>
                                     <span className={styles.conta}> Clique aqui.</span>
                                 </Link>
                             </div>

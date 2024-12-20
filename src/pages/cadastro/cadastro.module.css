@@ -13,6 +13,10 @@
     align-items:center;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .containerImagem {
     width : 60%;
     display: flex;

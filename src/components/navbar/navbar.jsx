@@ -3,7 +3,8 @@ import styles from './navbar.module.css';
 import {useNavigate} from 'react-router-dom';
 import {AuthContext} from '../../context/AuthContext.jsx';
 import {Usuario} from '../usuario/usuario.jsx';
-import logo from '/src/assets/pexels-kowalievska-1148957.jpg'
+// import logo from '/src/assets/pexels-kowalievska-1148957.jpg'
+import logo from '/src/assets/teste.png';
 
 const Navbar = () => {
 

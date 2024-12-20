@@ -17,6 +17,7 @@ const Catalog = () => {
                 navigate('/');
                 return;
             }
+            // Lendo as categorias....
             try {
                 api.defaults.headers.common['Authorization'] = 'Bearer ' + user.token;
                 const response = await api.get('/categorias');
@@ -37,7 +38,6 @@ const Catalog = () => {
         <>
             <NavCatalog category={category}/>
             <div className={styles.containerContent}>
-
                 <select className="form-control" onChange={junta} value="1">
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="0">Bebidas</option>

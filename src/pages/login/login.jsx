@@ -82,13 +82,13 @@ const Login = () => {
                         <div className={styles.textSemCadastro}>
                             <div>
                                 <span>Não tem conta?</span>
-                                <Link to={'/Cadastro'}>
+                                <Link to={'/Cadastro'} className={styles.link}>
                                     <span className={styles.conta}> Clique aqui.</span>
                                 </Link>
                             </div>
                             <div>
-                                <Link to={'/Cadastro'}>
-                                    <span>Esqueceu a Senha?</span>
+                                <Link to={'/Cadastro'} className={styles.link}>
+                                    <span className={styles.conta}>Esqueceu a Senha?</span>
                                 </Link>
                             </div>
                         </div>
